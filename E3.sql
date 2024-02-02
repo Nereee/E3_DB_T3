@@ -1,4 +1,5 @@
 CREATE DATABASE E3 COLLATE = utf8_general_ci;
+
 USE E3;
 
 CREATE TABLE zinema (
