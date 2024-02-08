@@ -11,7 +11,7 @@ CREATE TABLE zinema (
     herria varchar (50),
     zinema_izena varchar(50),
     areto_zbk smallint,
-    ordutegia varchar(10),
+    ordutegia varchar(20),
     telefonoa int,
     primary key (id_zinema)
 );
@@ -33,7 +33,7 @@ CREATE TABLE filma (
 
 CREATE TABLE saioa (
     id_saioa smallint auto_increment,
-    saioaren_eguna date,
+    saioaren_eguna enum ('Larunbata','Igandea') not null,
     ordutegia varchar(20),
     id_aretoa smallint,
     id_filma smallint,
@@ -55,7 +55,7 @@ CREATE TABLE bezeroa (
     NAN varchar(9),
     bezero_izena varchar(50),
     abizena varchar(50),
-    sexua enum('Emakumea', 'Gizona') not null,
+    sexua enum('E', 'G') not null,
     primary key (NAN)
 );
 
@@ -333,3 +333,10 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 2, 8, 4);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 3, 12, 4);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 4, 16, 4);
+
+-- BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*
+
+Insert into BEZEROA (NAN, bezero_izena, abizena, sexua) values ('79582125L', 'Aitor', 'Mentxaka', 'G');
+Insert into BEZEROA (NAN, bezero_izena, abizena, sexua) values ('79745123K', 'Unai', 'Souto', 'G');
+Insert into BEZEROA (NAN, bezero_izena, abizena, sexua) values ('79963569P', 'Iker', 'Cortes', 'G');
+Insert into BEZEROA (NAN, bezero_izena, abizena, sexua) values ('79145122T', 'Irune', 'Casquet', 'E');
