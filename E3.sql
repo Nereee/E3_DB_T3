@@ -56,6 +56,8 @@ CREATE TABLE bezeroa (
     bezero_izena varchar(50),
     abizena varchar(50),
     sexua enum('E', 'G') not null,
+    erabiltzailea varchar (20),
+    pasahitza smallint,
     primary key (NAN)
 );
 
@@ -335,8 +337,9 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 4, 16, 4);
 
 -- BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*
-
-Insert into BEZEROA (NAN, bezero_izena, abizena, sexua) values ('79582125L', 'Aitor', 'Mentxaka', 'G');
-Insert into BEZEROA (NAN, bezero_izena, abizena, sexua) values ('79745123K', 'Unai', 'Souto', 'G');
-Insert into BEZEROA (NAN, bezero_izena, abizena, sexua) values ('79963569P', 'Iker', 'Cortes', 'G');
-Insert into BEZEROA (NAN, bezero_izena, abizena, sexua) values ('79145122T', 'Irune', 'Casquet', 'E');
+select *
+from bezeroa;
+Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79582125L', 'Aitor', 'Mentxaka', 'G','amen','12345');
+Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79745123K', 'Unai', 'Souto', 'G','usou','12345');
+Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79963569P', 'Iker', 'Cortes', 'G','icor','12345');
+Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79145122T', 'Irune', 'Casquet', 'E','icas','12345');
