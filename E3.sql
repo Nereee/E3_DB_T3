@@ -346,26 +346,15 @@ Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza
 
 -- ZERRENDAK SORTZEKO KONTSULTAK 
 
-#2. Film gehien ikusi dituzten erabiltzaileak 
+#1. Iaz diru gehien aportatu duten filmen zerrenda osoa dimentsio desberdinak erabiliz aztertzeko
 
-SELECT bezero_izena, 
-       abizena, 
-       COUNT(sarrera.id_sarrera) AS Ikusitako_Filmak
-FROM sarrera
-JOIN bezeroa ON sarrera.NAN = bezeroa.NAN
-GROUP BY bezero_izena, abizena
-ORDER BY Ikusitako_Filmak DESC;
+
+
+
+#2. Film gehien ikusi dituzten erabiltzaileak 
 
 
 #3. Bezero gutxien dituen zinema, bezero-kopurua adierazita.
 
-SELECT zinema.zinema_izena, 
-       COUNT(bezeroa.NAN) AS Bezero_Kopurua
-FROM zinema
-LEFT JOIN saioa ON zinema.id_zinema = saioa.id_zinema
-LEFT JOIN sarrera ON saioa.id_saioa = sarrera.id_saioa
-LEFT JOIN bezeroa ON sarrera.NAN = bezeroa.NAN
-GROUP BY zinema_izena
-ORDER BY Bezero_Kopurua ASC;
 
 
