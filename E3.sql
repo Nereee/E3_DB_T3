@@ -101,28 +101,28 @@ Insert into ZINEMA (email, helbidea, probintzia, herria, zinema_izena, areto_zbk
 
 -- ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*ARETOAK*
 
--- 1 ZINEMA
+# 1 ZINEMA
 
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('1','1','Gorria');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('2','1','Urdina');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('3','1','Berdea');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('4','1','Zuria');
 
--- 2 ZINEMA
+# 2 ZINEMA
 
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('1','2','Gorria');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('2','2','Urdina');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('3','2','Berdea');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('4','2','Zuria');
 
--- 3 ZINEMA
+# 3 ZINEMA
 
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('1','3','Gorria');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('2','3','Urdina');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('3','3','Berdea');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('4','3','Zuria');
 
--- 4 ZINEMA
+# 4 ZINEMA
 
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('1','4','Gorria');
 Insert into ARETOA (id_aretoa,id_zinema,areto_izena) values ('2','4','Urdina');
@@ -153,9 +153,9 @@ Insert into FILMA (film_izena, generoa, iraupena) values ('Cisne negro', 'Beldur
 
 -- SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*SAIOAK*
 
--- 1 ZINEMA
+/*1 ZINEMA*/
 
--- LARUNBATA
+# LARUNBATA
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '17:00', 1, 1, 1);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '17:00', 2, 5, 1);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '17:00', 3, 9, 1);
@@ -176,7 +176,7 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '23:00', 3, 9, 1);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '23:00', 4, 13, 1);
 
--- IGANDEA
+# IGANDEA
 
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '17:00', 1, 1, 1);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '17:00', 2, 5, 1);
@@ -198,9 +198,9 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 3, 9, 1);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 4, 13, 1);
 
--- 2 ZINEMA
+/*2 ZINEMA*/
 
--- LARUNBATA
+# LARUNBATA
 
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '17:00', 1, 2, 2);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '17:00', 2, 6, 2);
@@ -222,7 +222,7 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '23:00', 3, 10, 2);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '23:00', 4, 14, 2);
 
--- IGANDEA
+# IGANDEA
 
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '17:00', 1, 2, 2);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '17:00', 2, 6, 2);
@@ -244,9 +244,9 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 3, 10, 2);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 4, 14, 2);
 
--- 3 ZINEMA
+/*3 ZINEMA*/
 
--- LARUNBATA
+# LARUNBATA
 
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '17:00', 1, 3, 3);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '17:00', 2, 7, 3);
@@ -268,7 +268,7 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '23:00', 3, 11, 3);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '23:00', 4, 15, 3);
 
--- IGANDEA
+# IGANDEA
 
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '17:00', 1, 3, 3);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '17:00', 2, 7, 3);
@@ -290,9 +290,9 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 3, 11, 3);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '23:00', 4, 15, 3);
 
--- 4 ZINEMA
+/*4 ZINEMA*/
 
--- LARUNBATA
+# LARUNBATA
 
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '17:00', 1, 4, 4);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '17:00', 2, 8, 4);
@@ -314,7 +314,7 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '23:00', 3, 12, 4);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Larunbata', '23:00', 4, 16, 4);
 
--- IGANDEA
+# IGANDEA
 
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '17:00', 1, 4, 4);
 Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('Igandea', '17:00', 2, 8, 4);
@@ -343,3 +343,29 @@ Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza
 Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79745123K', 'Unai', 'Souto', 'G','usou','12345');
 Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79963569P', 'Iker', 'Cortes', 'G','icor','12345');
 Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79145122T', 'Irune', 'Casquet', 'E','icas','12345');
+
+-- ZERRENDAK SORTZEKO KONTSULTAK 
+
+#2. Film gehien ikusi dituzten erabiltzaileak 
+
+SELECT bezero_izena, 
+       abizena, 
+       COUNT(sarrera.id_sarrera) AS Ikusitako_Filmak
+FROM sarrera
+JOIN bezeroa ON sarrera.NAN = bezeroa.NAN
+GROUP BY bezero_izena, abizena
+ORDER BY Ikusitako_Filmak DESC;
+
+
+#3. Bezero gutxien dituen zinema, bezero-kopurua adierazita.
+
+SELECT zinema.zinema_izena, 
+       COUNT(bezeroa.NAN) AS Bezero_Kopurua
+FROM zinema
+LEFT JOIN saioa ON zinema.id_zinema = saioa.id_zinema
+LEFT JOIN sarrera ON saioa.id_saioa = sarrera.id_saioa
+LEFT JOIN bezeroa ON sarrera.NAN = bezeroa.NAN
+GROUP BY zinema_izena
+ORDER BY Bezero_Kopurua ASC;
+
+
