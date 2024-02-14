@@ -55,19 +55,11 @@ CREATE TABLE erosketa (
 CREATE TABLE bezeroa (
     NAN varchar(9),
     bezero_izena varchar(50),
-    bezero_abizena varchar(50),
+    abizena varchar(50),
     sexua enum('E', 'G') not null,
     erabiltzailea varchar (20),
     pasahitza smallint,
     primary key (NAN)
-);
-
-CREATE TABLE langilea (
-    id_langilea smallint auto_increment,
-    NAN varchar(9),
-    langile_izena varchar(50),
-    langile_abizena varchar(50),
-    primary key (id_langilea)
 );
 
 CREATE TABLE sarrera (
@@ -99,9 +91,7 @@ FOREIGN KEY (id_saioa) REFERENCES SAIOA(id_saioa);
 
 ALTER TABLE EROSKETA 
 ADD 
-FOREIGN KEY (NAN) REFERENCES BEZEROA(NAN), 
-ADD 
-FOREIGN KEY (id_langilea) REFERENCES LANGILEA(id_langilea);
+FOREIGN KEY (NAN) REFERENCES BEZEROA(NAN);
 
 -- ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*ZINEMAK*
 
@@ -167,185 +157,185 @@ Insert into FILMA (film_izena, generoa, iraupena) values ('Cisne negro', 'Beldur
 /*1 ZINEMA*/
 
 # Larunbata
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 1, 1, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 2, 5, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 3, 9, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 4, 13, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 1, 1, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 2, 5, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 3, 9, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 4, 13, 1);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 1, 1, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 2, 5, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 3, 9, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 4, 13, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 1, 1, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 2, 5, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 3, 9, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 4, 13, 1);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 1, 1, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 2, 5, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 3, 9, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 4, 13, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 1, 1, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 2, 5, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 3, 9, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 4, 13, 1);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 1, 1, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 2, 5, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 3, 9, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 4, 13, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 1, 1, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 2, 5, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 3, 9, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 4, 13, 1);
 
 # Igandea
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 1, 1, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 2, 5, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 3, 9, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 4, 13, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 1, 1, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 2, 5, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 3, 9, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 4, 13, 1);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 1, 1, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 2, 5, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 3, 9, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 4, 13, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 1, 1, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 2, 5, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 3, 9, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 4, 13, 1);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 1, 1, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 2, 5, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 3, 9, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 4, 13, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 1, 1, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 2, 5, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 3, 9, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 4, 13, 1);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 1, 1, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 2, 5, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 3, 9, 1);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 4, 13, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 1, 1, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 2, 5, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 3, 9, 1);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 4, 13, 1);
 
 /*2 ZINEMA*/
 
 # Larunbata
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 1, 2, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 2, 6, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 3, 10, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 4, 14, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 1, 2, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 2, 6, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 3, 10, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 4, 14, 2);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 1, 2, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 2, 6, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 3, 10, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 4, 14, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 1, 2, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 2, 6, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 3, 10, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 4, 14, 2);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 1, 2, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 2, 6, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 3, 10, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 4, 14, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 1, 2, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 2, 6, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 3, 10, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 4, 14, 2);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 1, 2, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 2, 6, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 3, 10, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 4, 14, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 1, 2, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 2, 6, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 3, 10, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 4, 14, 2);
 
 # Igandea
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 1, 2, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 2, 6, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 3, 10, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 4, 14, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 1, 2, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 2, 6, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 3, 10, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 4, 14, 2);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 1, 2, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 2, 6, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 3, 10, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 4, 14, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 1, 2, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 2, 6, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 3, 10, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 4, 14, 2);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 1, 2, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 2, 6, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 3, 10, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 4, 14, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 1, 2, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 2, 6, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 3, 10, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 4, 14, 2);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 1, 2, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 2, 6, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 3, 10, 2);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 4, 14, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 1, 2, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 2, 6, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 3, 10, 2);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 4, 14, 2);
 
 /*3 ZINEMA*/
 
 # Larunbata
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 1, 3, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 2, 7, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 3, 11, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 4, 15, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 1, 3, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 2, 7, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 3, 11, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 4, 15, 3);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 1, 3, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 2, 7, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 3, 11, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 4, 15, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 1, 3, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 2, 7, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 3, 11, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 4, 15, 3);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 1, 3, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 2, 7, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 3, 11, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 4, 15, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 1, 3, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 2, 7, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 3, 11, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 4, 15, 3);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 1, 3, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 2, 7, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 3, 11, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 4, 15, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 1, 3, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 2, 7, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 3, 11, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 4, 15, 3);
 
 # Igandea
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 1, 3, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 2, 7, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 3, 11, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 4, 15, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 1, 3, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 2, 7, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 3, 11, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 4, 15, 3);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 1, 3, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 2, 7, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 3, 11, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 4, 15, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 1, 3, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 2, 7, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 3, 11, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 4, 15, 3);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 1, 3, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 2, 7, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 3, 11, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 4, 15, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 1, 3, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 2, 7, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 3, 11, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 4, 15, 3);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 1, 3, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 2, 7, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 3, 11, 3);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 4, 15, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 1, 3, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 2, 7, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 3, 11, 3);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 4, 15, 3);
 
 /*4 ZINEMA*/
 
 # Larunbata
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 1, 4, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 2, 8, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 3, 12, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '17:00', 4, 16, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 1, 4, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 2, 8, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 3, 12, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '17:00', 4, 16, 4);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 1, 4, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 2, 8, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 3, 12, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '19:00', 4, 16, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 1, 4, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 2, 8, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 3, 12, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '19:00', 4, 16, 4);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 1, 4, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 2, 8, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 3, 12, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '21:00', 4, 16, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 1, 4, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 2, 8, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 3, 12, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '21:00', 4, 16, 4);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 1, 4, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 2, 8, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 3, 12, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-10,2024-02-17,2024-02-24,2023-03-02', '23:00', 4, 16, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 1, 4, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 2, 8, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 3, 12, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-24', '23:00', 4, 16, 4);
 
 # Igandea
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 1, 4, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 2, 8, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 3, 12, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '17:00', 4, 16, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 1, 4, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 2, 8, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 3, 12, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '17:00', 4, 16, 4);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 1, 4, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 2, 8, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 3, 12, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '19:00', 4, 16, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 1, 4, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 2, 8, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 3, 12, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '19:00', 4, 16, 4);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 1, 4, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 2, 8, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 3, 12, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '21:00', 4, 16, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 1, 4, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 2, 8, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 3, 12, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '21:00', 4, 16, 4);
 
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 1, 4, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 2, 8, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 3, 12, 4);
-Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-11,2024-02-18,2024-02-25,2023-03-03', '23:00', 4, 16, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 1, 4, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 2, 8, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 3, 12, 4);
+Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) values ('2024-02-25', '23:00', 4, 16, 4);
 
 -- BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*
 
