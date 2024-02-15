@@ -60,7 +60,7 @@ CREATE TABLE bezeroa (
     NAN varchar(9),
     bezero_izena varchar(50),
     abizena varchar(50),
-    sexua enum('E', 'G') not null,
+    generoa enum('E', 'G', 'B') not null,
     erabiltzailea varchar (20),
     pasahitza smallint,
     primary key (NAN)
@@ -83,9 +83,7 @@ ALTER TABLE SAIOA
 ADD
 FOREIGN KEY (id_filma) REFERENCES FILMA(Id_filma),
 ADD
-FOREIGN KEY (id_aretoa) REFERENCES ARETOA(id_aretoa),
-ADD
-FOREIGN KEY (id_zinema) REFERENCES ZINEMA(Id_zinema);
+FOREIGN KEY (id_aretoa, id_zinema) REFERENCES ARETOA(id_aretoa,id_zinema);
 
 ALTER TABLE SARRERA
 ADD
