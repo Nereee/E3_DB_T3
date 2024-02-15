@@ -341,10 +341,10 @@ Insert into SAIOA (saioaren_eguna, ordutegia, id_aretoa, id_filma, id_zinema) va
 
 -- BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*BEZEROA*
 
-Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79582125L', 'Aitor', 'Mentxaka', 'G','amen','12345');
-Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79745123K', 'Unai', 'Souto', 'G','usou','12345');
-Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79963569P', 'Iker', 'Cortes', 'G','icor','12345');
-Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza) values ('79145122T', 'Irune', 'Casquet', 'E','icas','12345');
+Insert into BEZEROA (NAN, bezero_izena, abizena, generoa, erabiltzailea, pasahitza) values ('79582125L', 'Aitor', 'Mentxaka', 'G','amen','12345');
+Insert into BEZEROA (NAN, bezero_izena, abizena, generoa, erabiltzailea, pasahitza) values ('79745123K', 'Unai', 'Souto', 'G','usou','12345');
+Insert into BEZEROA (NAN, bezero_izena, abizena, generoa, erabiltzailea, pasahitza) values ('79963569P', 'Iker', 'Cortes', 'G','icor','12345');
+Insert into BEZEROA (NAN, bezero_izena, abizena, generoa, erabiltzailea, pasahitza) values ('79145122T', 'Irune', 'Casquet', 'E','icas','12345');
 
 -- ZERRENDAK SORTZEKO KONTSULTAK
 
