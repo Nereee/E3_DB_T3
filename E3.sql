@@ -1,7 +1,7 @@
--- DROP DATABASE E3;
-CREATE DATABASE E3 COLLATE = utf8_general_ci;
+-- DROP DATABASE E3_talde3;
+CREATE DATABASE E3_talde3 COLLATE = utf8_general_ci;
 
-USE E3;
+USE E3_talde3;
 
 
 CREATE TABLE zinema (
