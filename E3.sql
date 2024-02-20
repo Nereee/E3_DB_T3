@@ -1,7 +1,7 @@
--- DROP DATABASE E3;
-CREATE DATABASE E3 COLLATE = utf8_general_ci;
+-- DROP DATABASE E3_talde3;
+CREATE DATABASE E3_talde3 COLLATE = utf8_general_ci;
 
-USE E3;
+USE E3_talde3;
 
 
 CREATE TABLE zinema (
@@ -351,8 +351,8 @@ Insert into BEZEROA (NAN, bezero_izena, abizena, sexua, erabiltzailea, pasahitza
 
 #1. Iaz diru gehien aportatu duten filmen zerrenda osoa dimentsio desberdinak erabiliz aztertzeko
 
-Insert into EROSKETA (deskontua, erosketa_eguna, kantitatea, faktura, NAN) values (1, '2023-02-09', 5, 5.5, '79963569P');
-Insert into EROSKETA (deskontua, erosketa_eguna, kantitatea, faktura, NAN) values (2, '2023-02-10', 2, 5.5, '79582125L');
+Insert into EROSKETA (deskontua, erosketa_eguna, kantitatea, faktura, NAN) values (3, '2023-02-09', 5, 19.25, '79963569P');
+Insert into EROSKETA (deskontua, erosketa_eguna, kantitatea, faktura, NAN) values (2, '2023-02-10', 2, 8.8, '79582125L');
 
 Insert into SARRERA (id_erosketa, id_saioa) values (1, 1);
 Insert into SARRERA (id_erosketa, id_saioa) values (2, 4);
