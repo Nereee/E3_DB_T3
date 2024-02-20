@@ -426,3 +426,17 @@ order by emisio_kopurua desc;
 SELECT zinema_izena, COUNT(id_aretoa) AS areto_zbk
 FROM zinema INNER JOIN aretoa ON zinema.id_zinema = aretoa.id_zinema
 GROUP BY zinema_izena;
+
+
+SELECT id_saioa, ordutegia, saioaren_eguna, id_filma, id_zinema FROM saioa 
+WHERE id_zinema = 1
+AND id_filma = 1 
+AND saioaren_eguna = '2024-02-10'
+ORDER BY id_saioa ASC ;
+
+SELECT id_saioa, ordutegia, saioaren_eguna, id_filma, id_zinema FROM saioa WHERE id_zinema = 1 AND id_filma = 5 AND saioaren_eguna = '2024-02-10' ORDER BY id_saioa ASC ;
+SELECT id_saioa, ordutegia FROM saioa WHERE id_zinema = 1 AND id_filma = 5 AND saioaren_eguna = '2024-02-10' ORDER BY id_saioa ASC ;
+
+
+
+
